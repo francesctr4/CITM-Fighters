@@ -43,16 +43,27 @@ public class MovementController : MonoBehaviour
     
     public void TryMove(float speed)
     {
-        
 
         if (CanMove(speed))
         {       
             _animator.SetFloat(SPEED, _id == 1 ? -speed : speed);
-        }
-            
+
+            if (speed < 0)
+            {
+                transform.position += speed * Time.deltaTime * Vector3.right;
+
+            }
+            else if (speed > 0)
+            {
+                transform.position -= speed * Time.deltaTime * Vector3.left;
+            }
+
+        }  
         else
+        {
             _animator.SetFloat(SPEED, 0);
 
+        }
 
     }
 
@@ -66,12 +77,14 @@ public class MovementController : MonoBehaviour
     bool CanMove(float speed)
     {
         if (speed < 0)
-            transform.position += speed * Time.deltaTime * Vector3.right;
-            //return CanMoveLeft();
-        if (speed > 0)
-            transform.position -= speed * Time.deltaTime * Vector3.left;
-        //return CanMoveRight();
-
+        {
+            return CanMoveLeft();
+        }
+        else if (speed > 0)
+        {
+            return CanMoveRight();
+        }
+            
         return true;
     }
 
