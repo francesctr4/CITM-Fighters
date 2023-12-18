@@ -43,8 +43,7 @@ public class MovementController : MonoBehaviour
     
     public void TryMove(float speed)
     {
-
-        if (CanMove(speed))
+        if (CanMove(speed) && !_animator.GetComponent<PlayerController>().IsAtacking())
         {       
             _animator.SetFloat(SPEED, _id == 1 ? -speed : speed);
 

@@ -150,6 +150,12 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetTrigger(WIN);
     }
+
+    public bool IsAtacking()
+    {
+        return _isAttacking;
+    }
+
 }
 
 public enum UpDown
