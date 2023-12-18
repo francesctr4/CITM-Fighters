@@ -66,9 +66,11 @@ public class MovementController : MonoBehaviour
     bool CanMove(float speed)
     {
         if (speed < 0)
-            return CanMoveLeft();
+            transform.position += speed * Time.deltaTime * Vector3.right;
+            //return CanMoveLeft();
         if (speed > 0)
-            return CanMoveRight();
+            transform.position -= speed * Time.deltaTime * Vector3.left;
+        //return CanMoveRight();
 
         return true;
     }
