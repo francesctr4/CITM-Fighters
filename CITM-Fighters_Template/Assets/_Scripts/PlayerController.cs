@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnHit(Transform hit)
     {
+        Die();
         var hitBy = hit.root.GetComponent<PlayerController>();
         if (hitBy.transform == _otherPlayer && hitBy._isAttacking)
         {
