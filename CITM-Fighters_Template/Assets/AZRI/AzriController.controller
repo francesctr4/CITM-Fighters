@@ -435,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e524673440ff3c94e94164778335bfef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackAudioClip: {fileID: 8300000, guid: 006e65a522a83da479b297d3faee66c7, type: 3}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

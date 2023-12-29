@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour
         _playercount = 0;
         MovementController._playercount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     public void Win()

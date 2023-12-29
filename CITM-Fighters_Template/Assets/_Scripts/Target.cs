@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    private static float lastScoreTime; // Static variable to store the last time the score was incremented
+    private static float scoreCooldown = 2f; // Cooldown time in seconds
+
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
@@ -12,43 +15,44 @@ public class Target : MonoBehaviour
 
         if (attack != null)
         {
-
-            // Get the root (highest parent) of the current GameObject
-            Transform rootTransform = GetRootParent(transform);
-
-            // Check if the root object exists
-            if (rootTransform != null)
+            // Check if enough time has passed since the last score increment
+            if (Time.time - lastScoreTime >= scoreCooldown)
             {
-                // Check the tag of the root object
-                string rootTag = rootTransform.tag;
+                // Get the root (highest parent) of the current GameObject
+                Transform rootTransform = GetRootParent(transform);
 
-                // Increment the score based on the root's tag
-                switch (rootTag)
+                // Check if the root object exists
+                if (rootTransform != null)
                 {
-                    case "Azri":
-                        EvilAzriScoreScript.scoreValue += 100;
-                        
-                        break;
+                    // Check the tag of the root object
+                    string rootTag = rootTransform.tag;
 
-                    case "Evil Azri":
-                        AzriScoreScript.scoreValue += 100;
-                        break;
+                    // Increment the score based on the root's tag
+                    switch (rootTag)
+                    {
+                        case "Azri":
+                            EvilAzriScoreScript.scoreValue += 100;
+                            break;
 
-                    // Add more cases for other root tags if needed
+                        case "Evil Azri":
+                            AzriScoreScript.scoreValue += 100;
+                            break;
 
-                    default:
-                        // Default case if the tag doesn't match any expected value
-                        break;
+                        // Add more cases for other root tags if needed
 
+                        default:
+                            // Default case if the tag doesn't match any expected value
+                            break;
+                    }
 
+                    // Update the last score time
+                    lastScoreTime = Time.time;
                 }
 
+                Debug.Log(other.name);
+                GetComponentInParent<PlayerController>().OnHit(other.transform);
             }
-
-            Debug.Log(other.name);
-            GetComponentInParent<PlayerController>().OnHit(other.transform);
         }
-            
     }
 
     private Transform GetRootParent(Transform currentTransform)
