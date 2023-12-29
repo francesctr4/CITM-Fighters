@@ -37,3 +37,9 @@ The game will be programmed with Root Motion, so animations can move from the or
 In the game we will not be able to jump to the sides or change sides with the opponent. The boundaries of the stage will determine the total area that players can move through. The camera will be with a side view (Street Fighter type) and without scrolling.
 
 The main objective of the game is to hit the opponent. Whoever hits first wins the round. We can play infinite rounds.
+
+## My Implementation: Azri vs. Evil Azri
+
+### Player 1 Controls (Azri) [Gamepad]
+
+### Player 2 Controls (Evil Azri) [Keyboard]
