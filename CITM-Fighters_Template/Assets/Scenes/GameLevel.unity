@@ -2940,6 +2940,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8104473632497792810, guid: 6ea150c6e33eb354f8b6c426e014d14f, type: 3}
+      propertyPath: ImpactPrefab
+      value: 
+      objectReference: {fileID: 100002, guid: 4ace374ac48734e0a8159109bc4c6bbb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3009,6 +3013,10 @@ PrefabInstance:
       propertyPath: m_ProvidesContacts
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7567115323319744134, guid: 5489db5f69a71d045aec563017b2ab37, type: 3}
+      propertyPath: ImpactPrefab
+      value: 
+      objectReference: {fileID: 100002, guid: 4ace374ac48734e0a8159109bc4c6bbb, type: 3}
     - target: {fileID: 8636224643471861950, guid: 5489db5f69a71d045aec563017b2ab37, type: 3}
       propertyPath: m_IsTrigger
       value: 1
