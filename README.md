@@ -1,4 +1,4 @@
-# 3D Animation - CITM Fighters
+# 3D Animation - P2: CITM Fighters
 ## Guidelines
 
 Download the attached 3D models and select a character to animate. Other characters can be used if desired (as long as they are free to use), 
