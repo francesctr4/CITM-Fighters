@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackQuickBehaviour : StateMachineBehaviour
 {
-    public AudioClip attackAudioClip;
+    public AudioClip audioClip;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,7 +15,7 @@ public class AttackQuickBehaviour : StateMachineBehaviour
             playerController.SetAtacking(true, UpDown.Up);
 
             // Check if the attackAudioClip is assigned in the Unity Editor
-            if (attackAudioClip != null)
+            if (audioClip != null)
             {
                 // Create an AudioSource component if not already present
                 AudioSource audioSource = playerController.GetComponent<AudioSource>();
@@ -25,7 +25,7 @@ public class AttackQuickBehaviour : StateMachineBehaviour
                 }
 
                 // Play the assigned audio clip
-                audioSource.clip = attackAudioClip;
+                audioSource.clip = audioClip;
                 audioSource.Play();
             }
 
