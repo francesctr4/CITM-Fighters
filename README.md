@@ -40,6 +40,33 @@ The main objective of the game is to hit the opponent. Whoever hits first wins t
 
 ## My Implementation: Azri vs. Evil Azri
 
-### Player 1 Controls (Azri) [Gamepad]
+### Azri has to beat her own evil version!
 
-### Player 2 Controls (Evil Azri) [Keyboard]
+![Battle](https://github.com/francesctr4/CITM-Fighters/assets/99948892/0dfeb706-2c2a-4f6a-825a-857e575b7412)
+
+### To win, you must hit the opponent before it hits you. Each round won gives 100 points to the corresponding player.
+
+#### Player 1 Controls (Evil Azri) [Keyboard]
+
+    A,D -> Move
+    Space -> Attack Quick
+    S + Space -> Low Quick Attack
+    Enter -> Dodge High Attack
+    S + Enter -> Evade Low Attack
+    Right Control -> Attack Slow
+    S + Right Control -> Low Slow Attack
+
+#### Player 2 Controls (Azri) [PS4 Controller]
+
+    Left Joystick (Left & Right) -> Move
+    Square -> Attack Quick
+    Left Joystick (Down) + Square -> Low Quick Attack
+    Triangle -> Dodge High Attack
+    Left Joystick (Down) + Triangle -> Evade Low Attack
+    Cross -> Attack Slow
+    Left Joystick (Down) + Cross -> Low Slow Attack
+    
+## Disclaimer (Known Bugs)
+
+The Unity template of the project has several problems regarding the position of the players and, as a result, 
+you will notice that the walking animations are not being displayed correctly sometimes.
